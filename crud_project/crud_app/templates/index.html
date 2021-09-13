@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar bg-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="create/{{create}}">Create</a>
+    </li>
+
+  </ul>
+</nav>
+<h4>Table View</h4>
+<div class="container">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Job Role</th>
+      <th scope="col">Operations</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+  {%for emp in data %}
+
+    <tr>
+      <th scope="row">1</th>
+      <td>{{emp.name}}</td>
+      <td>{{emp.email}}</td>
+      <td>{{emp.adress}}</td>
+      <td>{{emp.jobrole}}</td>
+      <td>
+        <button class="btn btn-dark"><a href="update/{{emp.id}}">Update</a></button>
+        <button class="btn btn-dark"><a href="delete/{{emp.id}}">Delete</a></button>
+
+
+      </td>
+
+    </tr>
+  {% endfor %}
+
+
+  </tbody>
+</table>
+</div>
+
+
+  {{emp.name}}
+  {{emp.name}}
+  {{emp.name}}
+
+
+<br>
+
+<div class="container-fluid">
+  <h3>CRUD OPERATIONS </h3>
+  <p>C-create  R-read  U-update  D-delete.</p>
+</div>
+
+</body>
+</html>
